@@ -1,14 +1,14 @@
-function makeNewDie (sides, multiplier, color) {
+function MakeNewDie (sides, multiplier, color) {
   this.numberOfSides = sides || 6;
   this.sideMultiplier = multiplier || 1;
   this.color = color || 'white';
   
   this.roll = function(numberOfTimes) {
-    for(var i = 1; i <= numberOfTimes; i++){
+    for( var i = 1; i <= numberOfTimes; i++){
       var roll = (Math.floor(Math.random()*this.numberOfSides+1)) * this.sideMultiplier;
-      console.log("On roll " + i + ", the " + this.color + " die rolled "+ roll +".");   
+      console.log('On roll ' + i + ', the ' + this.color + ' die rolled '+ roll +'.');   
     }
-  }
+  };
 };    
 
 function WhitePageEntry(name, address, number) {
@@ -19,19 +19,19 @@ function WhitePageEntry(name, address, number) {
   
   this.getPhone = function () {
     if (this.public == true) {
-      console.log(this.name + "'s phone number is " + this.number + ".");
+      console.log(this.name + '\'s phone number is ' + this.number + '.');
     } else{
-      console.log("I'm sorry, that information is private.");
+      console.log('I\'m sorry, that information is private.');
     }
   };
   
   this.getAddress = function(){
     if (this.public == true) {
-      console.log(this.name + " lives at " + this.address);
+      console.log(this.name + ' lives at ' + this.address);
     } else{
-      console.log("I'm sorry, that information is private.");
+      console.log('I\'m sorry, that information is private.');
     }
-  }
+  };
 };
 
 function LessonHorse(name, age, color) {
@@ -46,16 +46,16 @@ function LessonHorse(name, age, color) {
   this.canJump = function(){
     this.jumps = true;
     this.level = 'intermediate';
-    console.log("Whee! " +this.name +" thinks jumping is fun!");
+    console.log('Whee! ' +this.name +' thinks jumping is fun!');
   };
   
   this.blacksmith = function() {
     if (this.shoesNeeded > 0){
-      console.log(this.name + " needs to see a blacksmith every six weeks.")
+      console.log(this.name + ' needs to see a blacksmith every six weeks.')
     } else {
-      console.log(this.name + " only needs to see a blacksmith every eight weeks.")
+      console.log(this.name + ' only needs to see a blacksmith every eight weeks.')
     }
-  }
+  };
 };
 
 
@@ -111,9 +111,10 @@ function TrainTrip (options) {
     } else {
       console.log('Good choice! ' + this.railLine + ' has the cheaper ticket.');
     }
-  }
+  };
 };
 
+//Train objects
 var testTrain = {
   railLine : 'Amtrak',
   fuelCapacity: 2000,
