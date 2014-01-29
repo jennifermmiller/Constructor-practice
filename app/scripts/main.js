@@ -1,3 +1,5 @@
+
+//Constructor 1:
 function MakeNewDie (sides, multiplier, color) {
   this.numberOfSides = sides || 6;
   this.sideMultiplier = multiplier || 1;
@@ -11,29 +13,31 @@ function MakeNewDie (sides, multiplier, color) {
   };
 };    
 
+//Constructor 2
 function WhitePageEntry(name, address, number) {
   this.name = name || 'need name';
   this.address = address || 'homeless???';
   this.number = number || '(999) 999-9999';
-  this.public = true;
+  this.open = true;
   
   this.getPhone = function () {
-    if (this.public == true) {
+    if (this.open == true) {
       console.log(this.name + '\'s phone number is ' + this.number + '.');
-    } else{
+    } else {
       console.log('I\'m sorry, that information is private.');
     }
   };
   
   this.getAddress = function(){
-    if (this.public == true) {
+    if (this.open == true) {
       console.log(this.name + ' lives at ' + this.address);
-    } else{
+    } else {
       console.log('I\'m sorry, that information is private.');
     }
   };
 };
 
+//Costructor 3
 function LessonHorse(name, age, color) {
   this.name = name;
   this.age = age;
@@ -43,23 +47,25 @@ function LessonHorse(name, age, color) {
   this.shoesNeeded = 2;
   this.jumps = false;
   
-  this.canJump = function(){
+  this.levelUp = function(){
     this.jumps = true;
     this.level = 'intermediate';
-    console.log('Whee! ' +this.name +' thinks jumping is fun!');
+    console.log('Whee! ' + this.name +' thinks jumping is fun!');
   };
   
-  this.blacksmith = function() {
+  this.needsBlacksmith = function() {
     if (this.shoesNeeded > 0){
-      console.log(this.name + ' needs to see a blacksmith every six weeks.')
+      console.log(this.name + ' needs to see a blacksmith every six weeks.');
+      return true;
     } else {
-      console.log(this.name + ' only needs to see a blacksmith every eight weeks.')
+      console.log(this.name + ' only needs to see a blacksmith every eight weeks.');
+      return false;
     }
   };
 };
 
 
-//Messing around with a lorger constructor...Questions: passing parameters to methods then calling them with another method after being ran.
+//Messing around with a longer constructor...Questions: passing parameters to methods then calling them with another method after being ran.
 //                                                      A way to make console.log appear when method was called on its own but not when its called by another method?
 function TrainTrip (options) {
   options = options || {};
@@ -114,7 +120,7 @@ function TrainTrip (options) {
   };
 };
 
-//Train objects
+//Train-option objects
 var testTrain = {
   railLine : 'Amtrak',
   fuelCapacity: 2000,

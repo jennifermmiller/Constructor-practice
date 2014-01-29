@@ -35,7 +35,7 @@
               this.color = color || 'white';
               
               this.roll = function(numberOfTimes) {
-                for(var i = 1; i <= numberOfTimes; i++){
+                for(var i = 1; i &#60 = numberOfTimes; i++){
                   var roll = (Math.floor(Math.random()*this.numberOfSides+1)) * this.sideMultiplier;
                   console.log("On roll " + i + ", the " + this.color + " die rolled "+ roll +".");   
                 }
@@ -52,10 +52,10 @@
               this.name = name || 'need name';
               this.address = address || 'homeless???';
               this.number = number || '(999) 999-9999';
-              this.public = true;
+              this.open = true;
               
               this.getPhone = function () {
-                if (this.public == true) {
+                if (this.open == true) {
                   console.log(this.name + "'s phone number is " + this.number + ".");
                 } else{
                   console.log("I'm sorry, that information is private.");
@@ -63,7 +63,7 @@
               };
               
               this.getAddress = function(){
-                if (this.public == true) {
+                if (this.open == true) {
                   console.log(this.name + " lives at " + this.address);
                 } else{
                   console.log("I'm sorry, that information is private.");
@@ -86,13 +86,13 @@
               this.shoesNeeded = 2;
               this.jumps = false;
               
-              this.canJump = function(){
+              this.levelUp = function(){
                 this.jumps = true;
                 this.level = 'intermediate';
                 console.log("Whee! " +this.name +" thinks jumping is fun!");
               };
               
-              this.blacksmith = function() {
+              this.needsBlacksmith = function() {
                 if (this.shoesNeeded > 0){
                   console.log(this.name + " needs to see a blacksmith every six weeks.")
                 } else {
