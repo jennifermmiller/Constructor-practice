@@ -1,26 +1,6 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>constructor practice</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/vendor.css"/>
-        <link rel="stylesheet" href="styles/98c06721.main.css"/>
-    </head>
-    <body>
-        <!--[if lt IE 10]>
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class=no-js><!--<![endif]--><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>constructor practice</title><meta name=description content=""><meta name=viewport content="width=device-width"><!-- Place favicon.ico and apple-touch-icon.png in the root directory --><link rel=stylesheet href=styles/vendor.css><link rel=stylesheet href=styles/98c06721.main.css><body><!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-      <div class="header">Below are the constructors that can be found in the console:</div>
-      <div class="roll-dice">
-        <pre>
+        <![endif]--><div class=header>Below are the constructors that can be found in the console:</div><div class=roll-dice><pre>
           <code>
             //This constructor allows users to create multiple, different dice and roll them a desired number of times.
             function makeNewDie (sides, multiplier, color) {
@@ -29,27 +9,24 @@
               this.color = color || 'white';
               
               this.roll = function(numberOfTimes) {
-                for(var i = 1; i <= numberOfTimes; i++){
+                for(var i = 1; i &#60 = numberOfTimes; i++){
                   var roll = (Math.floor(Math.random()*this.numberOfSides+1)) * this.sideMultiplier;
                   console.log("On roll " + i + ", the " + this.color + " die rolled "+ roll +".");   
                 }
               }
             }; 
           </code>
-        </pre>
-      </div>  
-      <div class="white-pages">
-        <pre>
+        </pre></div><div class=white-pages><pre>
           <code>
             //This constructor allows user to create entries for contacts and has methods to lookup the phone number and address of desired contact.
             function WhitePageEntry(name, address, number) {
               this.name = name || 'need name';
               this.address = address || 'homeless???';
               this.number = number || '(999) 999-9999';
-              this.public = true;
+              this.open = true;
               
               this.getPhone = function () {
-                if (this.public == true) {
+                if (this.open == true) {
                   console.log(this.name + "'s phone number is " + this.number + ".");
                 } else{
                   console.log("I'm sorry, that information is private.");
@@ -57,7 +34,7 @@
               };
               
               this.getAddress = function(){
-                if (this.public == true) {
+                if (this.open == true) {
                   console.log(this.name + " lives at " + this.address);
                 } else{
                   console.log("I'm sorry, that information is private.");
@@ -65,10 +42,7 @@
               }
             };
           </code>
-        </pre>
-      </div>
-      <div class="lesson-barn">
-        <pre>
+        </pre></div><div class=lesson-barn><pre>
           <code>
             //Just being a little bit silly, this constructor helps keep track of horses in a lesson program.
             function LessonHorse(name, age, color) {
@@ -80,13 +54,13 @@
               this.shoesNeeded = 2;
               this.jumps = false;
               
-              this.canJump = function(){
+              this.levelUp = function(){
                 this.jumps = true;
                 this.level = 'intermediate';
                 console.log("Whee! " +this.name +" thinks jumping is fun!");
               };
               
-              this.blacksmith = function() {
+              this.needsBlacksmith = function() {
                 if (this.shoesNeeded > 0){
                   console.log(this.name + " needs to see a blacksmith every six weeks.")
                 } else {
@@ -95,10 +69,7 @@
               }
             };
           </code>
-        </pre>
-      </div>
-      <div class="train-trip">
-        <pre>
+        </pre></div><div class=train-trip><pre>
           <code>
             //I was trying to think of an example onstructor that was a bit more detailed than above. This one takes in an object parameter and several methods.
             function TrainTrip (options) {
@@ -150,21 +121,9 @@
               }
             };
           </code>
-        </pre>
-      </div>
-
-        <script src="scripts/bb218a37.vendor.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        </pre></div><script src=scripts/bb218a37.vendor.js></script><!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-
-        <script src="scripts/06348967.main.js"></script>
-</body>
-</html>
+            ga('create','UA-XXXXX-X');ga('send','pageview');</script><script src=scripts/0ad57513.main.js></script>
